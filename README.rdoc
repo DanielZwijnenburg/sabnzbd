@@ -1,6 +1,6 @@
 = sabnzbd
 
-Description goes here.
+Ruby wrapper for the Sabnzbd api.
 
 == Contributing to sabnzbd
  
@@ -16,4 +16,3 @@ Description goes here.
 
 Copyright (c) 2012 Daniel Zwijnenburg. See LICENSE.txt for
 further details.
-

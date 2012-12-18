@@ -17,8 +17,8 @@ Jeweler::Tasks.new do |gem|
   gem.name = "sabnzbd"
   gem.homepage = "http://github.com/DanielZwijnenburg/sabnzbd"
   gem.license = "MIT"
-  gem.summary = %Q{TODO: one-line summary of your gem}
-  gem.description = %Q{TODO: longer description of your gem}
+  gem.summary = %Q{Ruby wrapper for the sabnzbd api}
+  gem.description = %Q{Ruby wrapper for the sabnzbd api. This gem can be used to gather status and download information from your sabnzb instance.}
   gem.email = "daniel@danielz.nl"
   gem.authors = ["Daniel Zwijnenburg"]
   # dependencies defined in Gemfile
