@@ -28,4 +28,62 @@ http_interactions:
         ","timeleft":"0:00:00","mb":23749.483629,"state":"PAUSED","loadavg":"","kbpersec":0.000000}'
     http_version: 
   recorded_at: Wed, 19 Dec 2012 12:58:36 GMT
+- request:
+    method: get
+    uri: http://localhost:8080/api?apikey=valid_key&mode=qstatus&output=json
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers: {}
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Wed, 19 Dec 2012 14:48:51 GMT
+      Content-Length:
+      - '425'
+      Content-Type:
+      - application/json;charset=UTF-8
+      Pragma:
+      - no-cache
+      Server:
+      - CherryPy/3.2.0
+    body:
+      encoding: US-ASCII
+      string: ! '{"have_warnings":"0","jobs":[{"timeleft":"0:00:00","mb":23749.483629,"msgid":"","filename":"a_big_legal_file","mbleft":13414.808467,"id":"SABnzbd_nzo_k92LC_"}],"noofslots":1,"paused":true,"pause_int":"0","mbleft":13414.808467,"diskspace2":62.491737,"diskspace1":62.491737,"speed":"0
+        ","timeleft":"0:00:00","mb":23749.483629,"state":"PAUSED","loadavg":"","kbpersec":0.000000}'
+    http_version: 
+  recorded_at: Wed, 19 Dec 2012 14:48:51 GMT
+- request:
+    method: get
+    uri: http://localhost:8080/api?apikey=valid_key&limit=LIMIT&mode=queue&output=json&start=START
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers: {}
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Wed, 19 Dec 2012 14:49:03 GMT
+      Content-Length:
+      - '1555'
+      Content-Type:
+      - application/json;charset=UTF-8
+      Pragma:
+      - no-cache
+      Server:
+      - CherryPy/3.2.0
+    body:
+      encoding: US-ASCII
+      string: ! '{"queue":{"active_lang":"en","session":"valid_key","slots":[{"status":"Queued","index":0,"eta":"unknown","missing":0,"avg_age":"57d","script":"None","msgid":"","verbosity":"","mb":"23749.48","sizeleft":"13.1
+        GB","filename":"a_big_legal_file","priority":"Normal","cat":"*","mbleft":"13414.81","timeleft":"0:00:00","percentage":"43","nzo_id":"SABnzbd_nzo_k92LC_","unpackopts":"3","size":"23.2
+        GB"}],"speed":"0  ","size":"23.2 GB","limit":0,"start":0,"diskspacetotal2":"232.44","darwin":true,"last_warning":"","have_warnings":"0","noofslots":1,"newzbin_url":"www.newzbin2.es","pause_int":"0","categories":["*","anime","apps","books","consoles","emulation","games","misc","movies","music","pda","resources","tv","unknown"],"diskspacetotal1":"232.44","mb":"23749.48","loadavg":"","cache_max":"0","speedlimit":"","webdir":"/Applications/SABnzbd.app/Contents/Resources/interfaces/Plush/templates","paused":true,"isverbose":false,"restart_req":false,"power_options":true,"helpuri":"http://wiki.sabnzbd.org/","uptime":"4d","refresh_rate":"","version":"0.6.15","color_scheme":"gold","new_release":"0.7.6","nt":false,"status":"Paused","finish":0,"cache_art":"0","paused_all":false,"finishaction":null,"sizeleft":"13.1
+        GB","cache_size":"0 B","mbleft":"13414.81","diskspace2":"62.49","diskspace1":"62.49","scripts":[],"timeleft":"0:00:00","nzb_quota":"","eta":"unknown","kbpersec":"0.00","new_rel_url":"http://sourceforge.net/projects/sabnzbdplus/files/sabnzbdplus/0.7.6/","queue_details":"0"}}'
+    http_version: 
+  recorded_at: Wed, 19 Dec 2012 14:49:03 GMT
 recorded_with: VCR 2.3.0

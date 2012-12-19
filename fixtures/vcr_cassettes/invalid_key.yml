@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: http://localhost:8080/api?apikey=invalid&mode=qstatus&output=json
+    uri: http://localhost:8080/api?apikey=invalid&limit=LIMIT&mode=queue&output=json&start=START
     body:
       encoding: US-ASCII
       string: ''

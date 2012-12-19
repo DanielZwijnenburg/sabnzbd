@@ -17,7 +17,7 @@ class Sabnzbd
   end
 
   def paused?
-    make_request["paused"]
+    make_request["queue"]["paused"]
   end
 
   def slots
@@ -26,7 +26,7 @@ class Sabnzbd
 
   private
 
-  def make_request(url = "/api?mode=qstatus&output=json&apikey=#{@api_key}")
+  def make_request(url = "/api?mode=queue&start=START&limit=LIMIT&output=json&apikey=#{@api_key}")
     verify_response( self.class.get(url).parsed_response )
   end
 
@@ -37,7 +37,7 @@ class Sabnzbd
   end
 
   def initialize_slots
-    jobs = make_request["jobs"]
+    jobs = make_request["queue"]["slots"]
 
     jobs.each.inject([]) do |arr, job|
       arr << Sabnzbd::Slot.new(job)
