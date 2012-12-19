@@ -17,10 +17,11 @@ Jeweler::Tasks.new do |gem|
   gem.name = "sabnzbd"
   gem.homepage = "http://github.com/DanielZwijnenburg/sabnzbd"
   gem.license = "MIT"
-  gem.summary = %Q{Ruby wrapper for the sabnzbd api}
+  gem.summary = %Q{Ruby wrapper for the sabnzbd api.}
   gem.description = %Q{Ruby wrapper for the sabnzbd api. This gem can be used to gather status and download information from your sabnzb instance.}
   gem.email = "daniel@danielz.nl"
   gem.authors = ["Daniel Zwijnenburg"]
+  gem.add_dependency 'httparty'
   # dependencies defined in Gemfile
 end
 Jeweler::RubygemsDotOrgTasks.new
