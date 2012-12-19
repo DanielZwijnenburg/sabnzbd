@@ -1,6 +1,31 @@
-= sabnzbd
+= Sabnzbd
 
-Ruby wrapper for the Sabnzbd api.
+    version 0.1.0
+    Daniël Zwijnenburg
+
+This gem can be used to gather status and download information from your sabnzb instance.
+
+= Usage
+
+You can use this gem by including it inside your Gemfile:
+
+    gem "sabnzbd"
+
+If you have a running instance of sabnzbd somewhere you will need to get the API key (you can find the API key under config/general > API KEY) and url(defaults to localhost:8080).
+
+    sab = Sabnzbd.new({api_key: "your_api_key_here"})
+    
+    sab.base_uri
+    => "localhost:8080"
+
+    sab.paused?
+    => false
+
+    sab.slots
+     => [#<Sabnzbd::Slot:0x007fb601049638 @time_left="0:00:00", @mb=23749.483629, @msgid="", @filename="a_big_legal_file", @mb_left=22061.784398]
+
+     sab.slots.first.filename
+     => "a_big_legal_file"
 
 == Contributing to sabnzbd
  
