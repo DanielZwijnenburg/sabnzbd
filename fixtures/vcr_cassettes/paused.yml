@@ -1,0 +1,59 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://localhost:8080/api?apikey=valid_key&mode=qstatus&output=json
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers: {}
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Wed, 19 Dec 2012 12:12:31 GMT
+      Content-Length:
+      - '425'
+      Content-Type:
+      - application/json;charset=UTF-8
+      Pragma:
+      - no-cache
+      Server:
+      - CherryPy/3.2.0
+    body:
+      encoding: US-ASCII
+      string: ! '{"have_warnings":"7","jobs":[{"timeleft":"0:00:00","mb":23749.483629,"msgid":"","filename":"a_big_legal_file","mbleft":22281.559650,"id":"SABnzbd_nzo_k92LC_"}],"noofslots":1,"paused":true,"pause_int":"0","mbleft":22281.559650,"diskspace2":70.695053,"diskspace1":70.695053,"speed":"0
+        ","timeleft":"0:00:00","mb":23749.483629,"state":"PAUSED","loadavg":"","kbpersec":0.000000}'
+    http_version: 
+  recorded_at: Wed, 19 Dec 2012 12:12:31 GMT
+- request:
+    method: get
+    uri: http://localhost:8080/api?apikey=valid_key&mode=qstatus&output=json
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers: {}
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Wed, 19 Dec 2012 13:00:12 GMT
+      Content-Length:
+      - '44'
+      Content-Type:
+      - application/json;charset=UTF-8
+      Pragma:
+      - no-cache
+      Server:
+      - CherryPy/3.2.0
+    body:
+      encoding: US-ASCII
+      string: ! '{"have_warnings":"7","jobs":[{"timeleft":"0:00:00","mb":23749.483629,"msgid":"","filename":"a_big_legal_file","mbleft":22281.559650,"id":"SABnzbd_nzo_k92LC_"}],"noofslots":1,"paused":true,"pause_int":"0","mbleft":22281.559650,"diskspace2":70.695053,"diskspace1":70.695053,"speed":"0
+        ","timeleft":"0:00:00","mb":23749.483629,"state":"PAUSED","loadavg":"","kbpersec":0.000000}'
+    http_version: 
+  recorded_at: Wed, 19 Dec 2012 13:00:12 GMT
+recorded_with: VCR 2.3.0
