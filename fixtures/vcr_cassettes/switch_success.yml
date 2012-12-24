@@ -1,0 +1,98 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://localhost:8080/api?apikey=valid_key&limit=LIMIT&mode=queue&output=json&start=START
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers: {}
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Mon, 24 Dec 2012 10:48:02 GMT
+      Content-Length:
+      - '1952'
+      Content-Type:
+      - application/json;charset=UTF-8
+      Pragma:
+      - no-cache
+      Server:
+      - CherryPy/3.2.0
+    body:
+      encoding: US-ASCII
+      string: ! '{"queue":{"active_lang":"en","session":"valid_key","slots":[{"status":"Queued","index":0,"eta":"unknown","missing":0,"avg_age":"62d","script":"None","msgid":"","verbosity":"","mb":"15136.44","sizeleft":"12.9
+        GB","filename":"a_big_legal_file","priority":"High","cat":"*","mbleft":"13260.72","timeleft":"0:00:00","percentage":"12","nzo_id":"id_1","unpackopts":"3","size":"14.8
+        GB"},{"status":"Queued","index":1,"eta":"unknown","missing":0,"avg_age":"8h","script":"None","msgid":"","verbosity":"","mb":"103.92","sizeleft":"104
+        MB","filename":"a_smaller_legal_file","priority":"High","cat":"tv","mbleft":"103.92","timeleft":"0:00:00","percentage":"0","nzo_id":"id_2","unpackopts":"3","size":"104
+        MB"}],"speed":"0  ","size":"14.9 GB","limit":0,"start":0,"diskspacetotal2":"232.44","darwin":true,"last_warning":"","have_warnings":"0","noofslots":2,"newzbin_url":"www.newzbin2.es","pause_int":"0","categories":["*","anime","apps","books","consoles","emulation","games","misc","movies","music","pda","resources","tv","unknown"],"diskspacetotal1":"232.44","mb":"15240.36","loadavg":"","cache_max":"0","speedlimit":"","webdir":"/Applications/SABnzbd.app/Contents/Resources/interfaces/Plush/templates","paused":true,"isverbose":false,"restart_req":false,"power_options":true,"helpuri":"http://wiki.sabnzbd.org/","uptime":"8d","refresh_rate":"","version":"0.6.15","color_scheme":"gold","new_release":"0.7.7","nt":false,"status":"Paused","finish":0,"cache_art":"0","paused_all":false,"finishaction":null,"sizeleft":"13.1
+        GB","cache_size":"0 B","mbleft":"13364.64","diskspace2":"48.77","diskspace1":"48.77","scripts":[],"timeleft":"0:00:00","nzb_quota":"","eta":"unknown","kbpersec":"0.00","new_rel_url":"http://sourceforge.net/projects/sabnzbdplus/files/sabnzbdplus/0.7.7/","queue_details":"0"}}'
+    http_version: 
+  recorded_at: Mon, 24 Dec 2012 10:48:02 GMT
+- request:
+    method: get
+    uri: http://localhost:8080/api?apikey=valid_key&mode=switch&value=id_1&value2=id_2
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers: {}
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Mon, 24 Dec 2012 10:48:02 GMT
+      Content-Length:
+      - '4'
+      Content-Type:
+      - text/plain;charset=utf-8
+      Pragma:
+      - no-cache
+      Server:
+      - CherryPy/3.2.0
+    body:
+      encoding: US-ASCII
+      string: ! '1 1
+
+'
+    http_version: 
+  recorded_at: Mon, 24 Dec 2012 10:48:02 GMT
+- request:
+    method: get
+    uri: http://localhost:8080/api?apikey=valid_key&limit=LIMIT&mode=queue&output=json&start=START
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers: {}
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Mon, 24 Dec 2012 10:48:02 GMT
+      Content-Length:
+      - '1952'
+      Content-Type:
+      - application/json;charset=UTF-8
+      Pragma:
+      - no-cache
+      Server:
+      - CherryPy/3.2.0
+    body:
+      encoding: US-ASCII
+      string: ! '{"queue":{"active_lang":"en","session":"valid_key","slots":[{"status":"Queued","index":0,"eta":"unknown","missing":0,"avg_age":"8h","script":"None","msgid":"","verbosity":"","mb":"103.92","sizeleft":"104
+        MB","filename":"a_smaller_legal_file","priority":"High","cat":"tv","mbleft":"103.92","timeleft":"0:00:00","percentage":"0","nzo_id":"id_2","unpackopts":"3","size":"104
+        MB"},{"status":"Queued","index":1,"eta":"unknown","missing":0,"avg_age":"62d","script":"None","msgid":"","verbosity":"","mb":"15136.44","sizeleft":"12.9
+        GB","filename":"a_big_legal_file","priority":"High","cat":"*","mbleft":"13260.72","timeleft":"0:00:00","percentage":"12","nzo_id":"id_1","unpackopts":"3","size":"14.8
+        GB"}],"speed":"0  ","size":"14.9 GB","limit":0,"start":0,"diskspacetotal2":"232.44","darwin":true,"last_warning":"2012-12-20
+        13:27:21,632\nWARNING:\nInvalid NZB file bluray.nzb, skipping (reason=unclosed
+        token, line=29737)","have_warnings":"0","noofslots":2,"newzbin_url":"www.newzbin2.es","pause_int":"0","categories":["*","anime","apps","books","consoles","emulation","games","misc","movies","music","pda","resources","tv","unknown"],"diskspacetotal1":"232.44","mb":"15240.36","loadavg":"","cache_max":"0","speedlimit":"","webdir":"/Applications/SABnzbd.app/Contents/Resources/interfaces/Plush/templates","paused":true,"isverbose":false,"restart_req":false,"power_options":true,"helpuri":"http://wiki.sabnzbd.org/","uptime":"8d","refresh_rate":"","version":"0.6.15","color_scheme":"gold","new_release":"0.7.7","nt":false,"status":"Paused","finish":0,"cache_art":"0","paused_all":false,"finishaction":null,"sizeleft":"13.1
+        GB","cache_size":"0 B","mbleft":"13364.64","diskspace2":"48.77","diskspace1":"48.77","scripts":[],"timeleft":"0:00:00","nzb_quota":"","eta":"unknown","kbpersec":"0.00","new_rel_url":"http://sourceforge.net/projects/sabnzbdplus/files/sabnzbdplus/0.7.7/","queue_details":"0"}}'
+    http_version: 
+  recorded_at: Mon, 24 Dec 2012 10:48:02 GMT
+recorded_with: VCR 2.3.0

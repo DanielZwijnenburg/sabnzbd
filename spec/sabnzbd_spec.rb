@@ -38,7 +38,7 @@ describe "Sabnzbd" do
     end
 
     it "should raise an error" do 
-      expect {sabnzbd.simple_queue}.to raise_error(ApiKeyInvalid)
+      expect {sabnzbd.advanced_queue}.to raise_error(ApiKeyInvalid)
     end
 
     after do
@@ -65,14 +65,14 @@ describe "Sabnzbd" do
     end
   end
 
-  describe "GET simple Queue output" do
+  describe "GET advanced Queue output" do
     let(:sabnzbd) {Sabnzbd.new({base_uri: Base_uri, api_key: "valid_key"})}
     before do
-      VCR.insert_cassette 'simple queue', :record => :new_episodes
+      VCR.insert_cassette 'advanced queue', :record => :new_episodes
     end
 
-    it "should get the simple queue" do 
-      sabnzbd.simple_queue.should be_an_instance_of(Hash)
+    it "should get the advanced queue" do 
+      sabnzbd.advanced_queue.should be_an_instance_of(Hash)
     end
 
     after do
@@ -88,7 +88,19 @@ describe "Sabnzbd" do
 
     it "should have 1 slot that is downloading a_big_legal_file" do 
      sabnzbd.slots.first.filename.should == "a_big_legal_file"
-   end
+    end
+
+    it "should be queued" do
+      sabnzbd.slots.first.status.should == "Queued"
+    end
+
+    it "should have a speed of 0" do
+      sabnzbd.speed.should == "0"
+    end
+
+    it "should have a position of 0" do
+      sabnzbd.slots.first.position.should == 0
+    end
 
     after do
       VCR.eject_cassette

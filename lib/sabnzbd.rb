@@ -1,18 +1,20 @@
 require 'httparty'
 require 'sabnzbd/slot'
+require 'sabnzbd/utils'
 
 class Sabnzbd
   attr_accessor :api_key, :base_uri
-  attr_reader :slots
+  attr_reader :slots, :utils
   include HTTParty
   
   def initialize(args={})
     @api_key  = args[:api_key]  || (raise ApiKeyMissing.new, "Api key missing")
     @base_uri = args[:base_uri] || "localhost:8080"
     self.class.base_uri @base_uri
+    @utils    = Sabnzbd::Utils.new(self)
   end
 
-  def simple_queue
+  def advanced_queue
     make_request
   end
 
@@ -20,15 +22,19 @@ class Sabnzbd
     make_request["queue"]["paused"]
   end
 
-  def slots
-    @slots ||= initialize_slots
+  def speed
+    make_request["queue"]["speed"].strip
   end
 
-  private
+  def slots(refresh=false)
+    refresh ? @slots = initialize_slots : @slots ||= initialize_slots
+  end
 
   def make_request(url = "/api?mode=queue&start=START&limit=LIMIT&output=json&apikey=#{@api_key}")
     verify_response( self.class.get(url).parsed_response )
   end
+
+  private
 
   def verify_response response
     raise ApiKeyInvalid.new, "Api key invalid #{@api_key}" if response["status"] == false && response["error"]
