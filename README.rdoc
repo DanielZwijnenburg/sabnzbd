@@ -1,11 +1,11 @@
-# Sabnzbd
+= Sabnzbd
 
     version 0.1.0
     Daniël Zwijnenburg
 
 This gem can be used to gather status and download information from your sabnzb instance.
 
-## Usage
+== Usage
 
 You can use this gem by including it inside your Gemfile:
 
@@ -13,7 +13,7 @@ You can use this gem by including it inside your Gemfile:
 
 If you have a running instance of sabnzbd somewhere you will need to get the API key (you can find the API key under config/general > API KEY) and url(defaults to localhost:8080).
 
-### Basic information
+=== Basic information
 
     sab = Sabnzbd.new({api_key: "your_api_key_here"})
     
@@ -29,7 +29,7 @@ If you have a running instance of sabnzbd somewhere you will need to get the API
      sab.slots.first.filename
      => "a_big_legal_file"
 
-### information about download slots
+=== information about download slots
 
     sab.slots
     => [#<Sabnzbd::Slot:0x007fa9498e0ce8 @filename="a_smaller_legal_file", @average_age="9h", @status="Queued", @category="tv", @files_missing=0, @position=0, @priority="High", @percentage_completed="0", @eta="unknown", @size="104 MB", @size_left="104 MB", @mb="103.92", @mb_left="103.92", @msgid="", @nzo_id="SABnzbd_nzo_xxxxa">, #<Sabnzbd::Slot:0x007fa9498e0a40 @filename="a_big_legal_file", @average_age="62d", @status="Queued", @category="*", @files_missing=0, @position=1, @priority="High", @percentage_completed="12", @eta="unknown", @size="14.8 GB", @size_left="12.9 GB", @mb="15136.44", @mb_left="13260.72", @msgid="", @nzo_id="SABnzbd_nzo_xxxxb">]
@@ -37,7 +37,7 @@ If you have a running instance of sabnzbd somewhere you will need to get the API
     sab.utils.slot_positions
     => {0=>"SABnzbd_nzo_xxxxa", 1=>"SABnzbd_nzo_xxxxb"}
 
-### switching download positions
+=== switching download positions
     
     sab.utils.switch(sab.slots.first, sab.slots.last)
     => "1 1\n" #meaning success, need to refactor.
