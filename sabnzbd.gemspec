@@ -5,11 +5,11 @@
 
 Gem::Specification.new do |s|
   s.name = "sabnzbd"
-  s.version = "0.1.1"
+  s.version = "0.2.0"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Daniel Zwijnenburg"]
-  s.date = "2012-12-19"
+  s.date = "2012-12-24"
   s.description = "Ruby wrapper for the sabnzbd api. This gem can be used to gather status and download information from your sabnzb instance."
   s.email = "daniel@danielz.nl"
   s.extra_rdoc_files = [
@@ -26,16 +26,21 @@ Gem::Specification.new do |s|
     "README.rdoc",
     "Rakefile",
     "VERSION",
+    "fixtures/vcr_cassettes/advanced_queue.yml",
     "fixtures/vcr_cassettes/invalid_key.yml",
+    "fixtures/vcr_cassettes/multiple_slots_downloading.yml",
     "fixtures/vcr_cassettes/paused.yml",
     "fixtures/vcr_cassettes/simple_queue.yml",
     "fixtures/vcr_cassettes/slots.yml",
+    "fixtures/vcr_cassettes/switch_success.yml",
     "fixtures/vcr_cassettes/valid_key.yml",
     "lib/sabnzbd.rb",
     "lib/sabnzbd/slot.rb",
+    "lib/sabnzbd/utils.rb",
     "sabnzbd.gemspec",
     "spec/sabnzbd_spec.rb",
-    "spec/spec_helper.rb"
+    "spec/spec_helper.rb",
+    "spec/utils_spec.rb"
   ]
   s.homepage = "http://github.com/DanielZwijnenburg/sabnzbd"
   s.licenses = ["MIT"]
