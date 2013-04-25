@@ -16,7 +16,7 @@ If you have a running instance of sabnzbd somewhere you will need to get the API
 === Basic information
 
     sab = Sabnzbd.new({api_key: "your_api_key_here"})
-    
+
     sab.base_uri
     => "localhost:8080"
 
@@ -38,7 +38,7 @@ If you have a running instance of sabnzbd somewhere you will need to get the API
     => {0=>"SABnzbd_nzo_xxxxa", 1=>"SABnzbd_nzo_xxxxb"}
 
 === switching download positions
-    
+
     sab.utils.switch(sab.slots.first, sab.slots.last)
     => "1 1\n" #meaning success, need to refactor.
 
@@ -46,7 +46,7 @@ If you have a running instance of sabnzbd somewhere you will need to get the API
     => {0=>"SABnzbd_nzo_xxxxb", 1=>"SABnzbd_nzo_xxxxa"}
 
 == Contributing to sabnzbd
- 
+
 * Check out the latest master to make sure the feature hasn't been implemented or the bug hasn't been fixed yet.
 * Check out the issue tracker to make sure someone already hasn't requested it and/or contributed it.
 * Fork the project.
